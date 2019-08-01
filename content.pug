@@ -1,0 +1,20 @@
+h1 #{region}网络赛账号 - #{teams[teamNo].name}
+p 你好！
+p 　　你们队在#{region}网络赛的账号如下:
+table
+    tr
+        th Username
+        th Password
+    tr
+        td= accounts[teamNo].username
+        td= accounts[teamNo].password
+p 附：其他各队账号对应一览
+table 
+    tr
+        th Username
+        th Team
+    - var i = 0;
+    while i < teams.length
+        tr
+            td= accounts[i].username
+            td= teams[i++].name
